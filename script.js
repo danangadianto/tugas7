@@ -26,22 +26,43 @@ function editForm() {
 }
 // Kode yang saya ubah untuk menyimpan value form
 function simpanForm() {
-    var inpName = document.getElementById("inpName").value;
-    var inpRole = document.getElementById("inpRole").value;
-    var inpAvailability =  document.getElementById("inpAvailability").value;
-    var inpUsia = document.getElementById("inpUsia").value;
-    var inpLokasi = document.getElementById("inpLokasi").value;
-    var inpYears = document.getElementById("inpYears").value;
-    var inpEmail = document.getElementById("inpEmail").value;
+    // var inpName = document.getElementById("inpName").value;
+    // var inpRole = document.getElementById("inpRole").value;
+    // var inpAvailability =  document.getElementById("inpAvailability").value;
+    // var inpUsia = document.getElementById("inpUsia").value;
+    // var inpLokasi = document.getElementById("inpLokasi").value;
+    // var inpYears = document.getElementById("inpYears").value;
+    // var inpEmail = document.getElementById("inpEmail").value;
 
-    document.getElementById("pName").textContent = inpName;
-    document.getElementById("pRole").textContent = inpRole;
-    document.getElementById("pAvailable").textContent = inpAvailability;
-    document.getElementById("pAge").textContent = inpUsia;
-    document.getElementById("pLocation").textContent = inpLokasi;
-    document.getElementById("pExperience").textContent = inpYears;
-    document.getElementById("pEmail").textContent = inpEmail;
-
+    
+    const queryString = window.location.search;
+    
+    const urlParams = new URLSearchParams(queryString);
+    
+    const nama = urlParams.get("nama");
+    console.log(nama);
+    const role = urlParams.get("role");
+    console.log(role);
+    const availabiaity = urlParams.get("availability");
+    console.log(availabiaity);
+    const usia = urlParams.get("usia");
+    console.log(usia);
+    const lokasi = urlParams.get("lokasi");
+    console.log(lokasi);
+    const experience = urlParams.get("experience");
+    console.log(experience);
+    const email = urlParams.get("email");
+    console.log(email);
+    
+    
+    document.getElementById("pName").textContent = nama;
+    document.getElementById("pRole").textContent = role;
+    document.getElementById("pAvailable").textContent = availabiaity;
+    document.getElementById("pAge").textContent = usia;
+    document.getElementById("pLocation").textContent = lokasi;
+    document.getElementById("pExperience").textContent = experience;
+    document.getElementById("pEmail").textContent = email;
+    
 }
 
 function showMenu() {
