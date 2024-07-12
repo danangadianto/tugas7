@@ -55,15 +55,17 @@ function simpanForm() {
     console.log(email);
     
     
-    document.getElementById("pName").textContent = nama;
-    document.getElementById("pRole").textContent = role;
-    document.getElementById("pAvailable").textContent = availabiaity;
-    document.getElementById("pAge").textContent = usia;
-    document.getElementById("pLocation").textContent = lokasi;
-    document.getElementById("pExperience").textContent = experience;
-    document.getElementById("pEmail").textContent = email;
+    document.getElementById("pName").innerHTML = nama;
+    document.getElementById("pRole").innerHTML = role;
+    document.getElementById("pAvailable").innerHTML = availabiaity;
+    document.getElementById("pAge").innerHTML = usia;
+    document.getElementById("pLocation").innerHTML = lokasi;
+    document.getElementById("pExperience").innerHTML = experience;
+    document.getElementById("pEmail").innerHTML = email;
     
 }
+
+simpanForm();
 
 function showMenu() {
   var menu = document.getElementById("menu");
